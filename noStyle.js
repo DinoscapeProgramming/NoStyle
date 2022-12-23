@@ -12,6 +12,13 @@ function noStyle() {
     }
   });
   Array.from(
+    document.getElementsByTagName("meta")
+  ).forEach((meta) => {
+    if (meta.name === "color-scheme") {
+      meta.remove();
+    }
+  });
+  Array.from(
     document.getElementsByTagName("*")
   ).forEach((element) => {
     element.className = "";
