@@ -7,7 +7,7 @@ function noStyle() {
   Array.from(
     document.getElementsByTagName("link")
   ).forEach((link) => { 
-    if (a.rel === "stylesheet") {
+    if (link.rel === "stylesheet") {
       link.remove();
     }
   });
